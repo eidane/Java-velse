@@ -1,11 +1,29 @@
 body{
 	
 }
-div{
-	width:40%;
+.maindiv{
+	
+	margin: 2%;
 }
-select{
-	border-radius: 10px
-	width:40px;
+.select {
+    width: 150px;
+	border-radius: 5px;
+	background-colour : #cc6699;
+	border-width: 1px;
 
+}
+
+.select:hover {
+    width: 150px;
+	border-radius: 5px;
+	background-colour : #f0f0f5;
+	border-color: #3399ff;
+	border-width: 1px;
+}
+.select:focus{
+	border-color: #3399ff;
+	border-width: 1px;
+}
+.option:checked{
+	background-color: #f0f0f5;
 }

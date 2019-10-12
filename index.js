@@ -11,10 +11,15 @@ function main()
 	for (x = 0; x<i; x++)
 	{
 		var opt=document.createElement('option');
-		opt.value=i
-		opt.innerHTML = options[x];
+		opt.value=x
+		opt.text = options[x];
+		opt.id="o"+x
+		opt.onmouseover=hover(x);
 		select.appendChild(opt);
-		console.log(i);
+		console.log(x);
 	}
 }
-
+function hover(x) {
+	// body...
+}
+//#f0f0f5
