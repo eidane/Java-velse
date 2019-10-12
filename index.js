@@ -10,16 +10,29 @@ function main()
 	select = document.getElementById('select')
 	for (x = 0; x<i; x++)
 	{
-		var opt=document.createElement('option');
+		var opt=document.createElement('li');
 		opt.value=x
-		opt.text = options[x];
-		opt.id="o"+x
-		opt.onmouseover=hover(x);
+		opt.appendChild = options[x];
+		
+		
 		select.appendChild(opt);
 		console.log(x);
 	}
 }
-function hover(x) {
+function openbox() {
 	// body...
+	document.getElementById("select").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("select");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 //#f0f0f5
