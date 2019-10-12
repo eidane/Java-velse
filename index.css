@@ -2,5 +2,10 @@ body{
 	
 }
 div{
-	
+	width:40%;
+}
+select{
+	border-radius: 10px
+	width:40px;
+
 }
