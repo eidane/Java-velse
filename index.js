@@ -12,16 +12,17 @@ function main(){
 	buttom.innerHTML=options[0].opname;
 	color.style.backgroundColor=options[0].color;
 
-	for (x = 0; x<i; x++)
+	for (var x = 0; x<i; x++)
 	{	
 		//createElement()
 		var opt=document.createElement('span');
 		var dot=document.createElement('span');
-		var breakeit=document.createElement('br');
+		var makediv=document.createElement('div');
 		dot.id="dropdown-content-color"
 		
 		dot.style.backgroundColor=options[x].color;
-
+		makediv.id="dropdown-content"+x
+		makediv.classname="dropdown-content"
 		opt.value=x
 		opt.id="dropdown-content"
 		console.log(opt);
@@ -30,9 +31,10 @@ function main(){
 		console.log(options[x].opname);
 
 		//opt.onclick=function() { options[x].opname;};
-		select.appendChild(dot);
-		select.appendChild(opt);
-		select.appendChild(breakeit);
+		select.appendChild(makediv);
+		div = document.getElementById('dropdown-content'+x);
+		div.appendChild(dot);
+		div.appendChild(opt);
 		
 
 	}
