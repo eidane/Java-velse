@@ -41,10 +41,11 @@ function main(){
 		console.log(div);
 		
 
+	//This needs to be inserted correctly then it will be in the goal.
+	//document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {changecolor(true,x)})
+	//document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {changecolor(false,x)})
+	//document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(options[x])})
 	}
-	document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {changecolor(true,x)})
-	document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {changecolor(false,x)})
-	document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(options[x])})
 }
 function openbox() {
 	// body...
