@@ -9,14 +9,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body onload="main();">
-<div class="box">
-	<p>Task status</p>
-	<div class="dropdown">
-		<button onclick="openbox()" class="dropbtn" id="selected"></button>
-		<ul class="dropdown-content" id="select">
-		</ul>
+
+	<div class="dot"></div>
+	<div class="box">
+		<p>Task status</p>
+		<div class="dropdown">
+			<button onclick="openbox()" class="dropbtn" ><span class="dot" id="color"></span><span id="selected"></span></button>	
+			<div class="dropdown-content" id="select">
+			</div>
+		</div>
 	</div>
-</div>
 
 
 

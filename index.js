@@ -1,28 +1,33 @@
-function main()
-{
-	var select, i,option; 
+function main(){
+	var select, i,option,buttom; 
 	//imput kilde
-	options=["Option 1", "Option 2", "Option 3", "Option 4"];
+	options=[Option1=new option("Option 1","#ff8080"), Option2=new option("Option 2","#ff8080"),Option3=new option("Option 3","#ff8080"),Option4=new option("Option 4","#ff8080")];
 	i=options.length;
 	console.log(i);
 	console.log(options);
 
-	select = document.getElementById('select')
+	select = document.getElementById('select');
+	buttom = document.getElementById('selected');
+	buttom.innerHTML=options[0];
+
 	for (x = 0; x<i; x++)
 	{
-		var opt=document.createElement('li');
+		var opt=document.createElement('p');
 		opt.value=x
-		opt.appendChild = options[x];
-		
-		
+		opt.innerHTML = options[x];
+		opt.id="dropdown-content"
+		opt.onclick=function() { buttom.innerHTML=options[opt.value];console.log(opt.value);};
 		select.appendChild(opt);
-		console.log(x);
+		
+
 	}
+
 }
 function openbox() {
 	// body...
 	document.getElementById("select").classList.toggle("show");
 }
+
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("select");
@@ -36,3 +41,8 @@ window.onclick = function(event) {
   }
 }
 //#f0f0f5
+function changeSelected(x,select){
+	console.log(x)
+	select.innerHTML=x;
+}
+object

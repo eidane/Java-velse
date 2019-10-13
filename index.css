@@ -31,27 +31,22 @@ option:checked, option:hover {
     color: white;
     background:  #f0f0f5;
 }
-
-
-
-
-
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+.dot{
+	height: 11px;
+	width: 11px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+#selected{
+	margin: 2px;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+p{
+	margin: 2px;
 }
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+.dropdown p:hover {
+	background-color: #ddd;
 }
 
 .dropdown-content {
@@ -64,6 +59,33 @@ option:checked, option:hover {
   z-index: 1;
 }
 
+}
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropbtn {
+  background-color: #ffffff;
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  border-color: : #3399ff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -72,6 +94,5 @@ option:checked, option:hover {
 }
 
 .dropdown a:hover {background-color: #ddd;}
-
 .show {display: block;}
 </style>
