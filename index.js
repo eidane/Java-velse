@@ -1,7 +1,7 @@
 function main(){
-	var select, i,option,buttom; 
+	var select, i,buttom; 
 	//imput kilde
-	options=[Option1=new option("Option 1","#ff8080"), Option2=new option("Option 2","#ff8080"),Option3=new option("Option 3","#ff8080"),Option4=new option("Option 4","#ff8080")];
+	options=[Option1=new option("Option 1","#99ff99"), Option2=new option("Option 2","#33adff"),Option3=new option("Option 3","#ff9933"),Option4=new option("Option 4","#ff8080")];
 	i=options.length;
 	console.log(i);
 	console.log(options);
@@ -14,7 +14,8 @@ function main(){
 	{
 		var opt=document.createElement('p');
 		opt.value=x
-		opt.innerHTML = options[x];
+		opt.innerHTML = options[x].opname;
+		console.log(options[x].opname);
 		opt.id="dropdown-content"
 		opt.onclick=function() { buttom.innerHTML=options[opt.value];console.log(opt.value);};
 		select.appendChild(opt);
@@ -45,4 +46,7 @@ function changeSelected(x,select){
 	console.log(x)
 	select.innerHTML=x;
 }
-object
+function option(opname,color){
+	this.opname=opname;
+	this.color=color;
+}
