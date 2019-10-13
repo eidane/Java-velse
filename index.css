@@ -5,33 +5,9 @@ body{
 	
 	margin: 2%;
 }
-.select {
-    width: 150px;
-	border-radius: 5px;
-	background-colour : #cc6699;
-	border-width: 1px;
 
-}
 
-.select:hover {
-    width: 150px;
-	border-radius: 5px;
-	background-colour : #f0f0f5;
-	border-color: #3399ff;
-	border-width: 1px;
-}
-.select:focus{
-	border-color: #3399ff;
-	border-width: 1px;
-}
-.maindic .select option:checked{
-	background-color: #f0f0f5;
-}
-option:checked, option:hover {
-    color: white;
-    background:  #f0f0f5;
-}
-#color{
+#color, .color{
 
 	height: 11px;
 	width: 11px;
@@ -76,8 +52,8 @@ p{
   text-align: left;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  border-color: : #3399ff;
+.dropbtn:hover, .dropbtn:focus, .dropbtn:afther {
+  border-color: #3399ff;
 }
 
 .dropdown {

@@ -15,10 +15,11 @@ function main(){
 	for (x = 0; x<i; x++)
 	{	
 		//createElement()
-		var opt=document.createElement('p');
-		var dot=document.createElement('p')
-		dot.id="color"
-		dot.class="dot"
+		var opt=document.createElement('span');
+		var dot=document.createElement('span');
+		var breakeit=document.createElement('p');
+		dot.id="dropdown-content"
+		dot.class="color"
 		dot.style.backgroundColor=options[x].color;
 
 		opt.value=x
@@ -31,6 +32,7 @@ function main(){
 		//opt.onclick=function() { options[x].opname;};
 		select.appendChild(dot);
 		select.appendChild(opt);
+		select.appendChild(breakeit);
 		
 
 	}
@@ -43,7 +45,7 @@ function openbox() {
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("select");
+    var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
