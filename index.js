@@ -35,8 +35,9 @@ function main(){
 		select.appendChild(makediv);
 		div = document.getElementById('dropdown-content'+x);
 		
-		document.getElementById('dropdown-content'+x).addEventListener("mouseover",changecolor(true,x))
-		document.getElementById('dropdown-content'+x).addEventListener("mouseout",changecolor(false,x))
+		document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {changecolor(true,x)})
+		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {changecolor(false,x)})
+		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function(){changeSelected(options[x])})
 		div.appendChild(dot);
 		div.appendChild(opt);
 		
@@ -64,11 +65,11 @@ window.onclick = function(event) {
 //#f0f0f5 background-color: #ddd;
 function changecolor(y,x){
 	if (y==true){
-		console.log('yes');
+		console.log(x);
 		document.getElementById('dropdown-content'+x).style.backgroundColor='#ddd';
 	}
 	else{
-		console.log('no');
+		console.log(x);
 		document.getElementById('dropdown-content'+x).style.backgroundColor='#ffffff';
 	}
 }
