@@ -32,10 +32,6 @@ body{
 	margin: 2px;
 }
 
-.dropdown div:hover {
-	background-color: #ddd;
-}
-
 .dropdown-content{
   display: none;
   position: absolute;

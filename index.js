@@ -3,7 +3,6 @@ function main(){
 	//imput kilde
 	options=[Option1=new option("Option 1","#99ff99"), Option2=new option("Option 2","#33adff"),Option3=new option("Option 3","#ff9933"),Option4=new option("Option 4","#ff8080")];
 	i=options.length;
-	console.log(i);
 	console.log(options);
 
 	select = document.getElementById('select');
@@ -25,25 +24,27 @@ function main(){
 		makediv.classname="dropdown-content";
 		opt.value=x;
 		opt.id="dropdown-content";
-		
-		console.log(opt);
-		console.log(dot);
+
+		console.log("number");
+		console.log(x);
 		opt.innerHTML = options[x].opname;
 		console.log(options[x].opname);
+		console.log(options[x].color);
 
 		//opt.onclick=function() { options[x].opname;};
 		select.appendChild(makediv);
 		div = document.getElementById('dropdown-content'+x);
 		
-		document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {changecolor(true,x)})
-		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {changecolor(false,x)})
-		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function(){changeSelected(options[x])})
+		
 		div.appendChild(dot);
 		div.appendChild(opt);
+		console.log(div);
 		
 
 	}
-
+	document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {changecolor(true,x)})
+	document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {changecolor(false,x)})
+	document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(options[x])})
 }
 function openbox() {
 	// body...
@@ -51,7 +52,7 @@ function openbox() {
 }
 
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+  if (!event.target.matches('.dropbtn') ) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
