@@ -8,16 +8,28 @@ function main(){
 
 	select = document.getElementById('select');
 	buttom = document.getElementById('selected');
-	buttom.innerHTML=options[0];
+	color = document.getElementById('color');
+	buttom.innerHTML=options[0].opname;
+	color.style.backgroundColor=options[0].color;
 
 	for (x = 0; x<i; x++)
-	{
+	{	
+		//createElement()
 		var opt=document.createElement('p');
+		var dot=document.createElement('p')
+		dot.id="color"
+		dot.class="dot"
+		dot.style.backgroundColor=options[x].color;
+
 		opt.value=x
+		opt.id="dropdown-content"
+		console.log(opt);
+		console.log(dot);
 		opt.innerHTML = options[x].opname;
 		console.log(options[x].opname);
-		opt.id="dropdown-content"
-		opt.onclick=function() { buttom.innerHTML=options[opt.value];console.log(opt.value);};
+
+		//opt.onclick=function() { options[x].opname;};
+		select.appendChild(dot);
 		select.appendChild(opt);
 		
 

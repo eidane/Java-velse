@@ -31,7 +31,8 @@ option:checked, option:hover {
     color: white;
     background:  #f0f0f5;
 }
-.dot{
+#color{
+
 	height: 11px;
 	width: 11px;
 	background-color: #bbb;
