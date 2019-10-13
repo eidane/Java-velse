@@ -40,11 +40,11 @@ function main(){
 		div.appendChild(opt);
 		console.log(div);
 		
+		//This needs to be inserted correctly then it will be in the goal.
+		document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {hoverover(true)})
+		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {hoverover(false)})
+		document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(x)})
 
-	//This needs to be inserted correctly then it will be in the goal.
-	//document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {changecolor(true,x)})
-	//document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {changecolor(false,x)})
-	//document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(options[x])})
 	}
 }
 function openbox() {
@@ -65,7 +65,7 @@ window.onclick = function(event) {
   }
 }
 //#f0f0f5 background-color: #ddd;
-function changecolor(y,x){
+function hoverover(y,x){
 	if (y==true){
 		console.log(x);
 		document.getElementById('dropdown-content'+x).style.backgroundColor='#ddd';
@@ -76,8 +76,7 @@ function changecolor(y,x){
 	}
 }
 function changeSelected(x){
-	opname=x.opname;
-	color=x.color;
+	
 	console.log(x);
 	select=document.getElementById('select');
 	color=document.getElementById('maincolor')
