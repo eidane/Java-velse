@@ -41,9 +41,9 @@ function main(){
 		console.log(div);
 		
 		//This needs to be inserted correctly then it will be in the goal.
-		document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() {hoverover(true)})
-		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {hoverover(false)})
-		document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(x)})
+		document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() { hoverover(true,this)})
+		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {hoverover(false,this)})
+		document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(this)})
 
 	}
 }
@@ -68,15 +68,15 @@ window.onclick = function(event) {
 function hoverover(y,x){
 	if (y==true){
 		console.log(x);
-		document.getElementById('dropdown-content'+x).style.backgroundColor='#ddd';
+		x.style.backgroundColor='#ddd';
 	}
 	else{
 		console.log(x);
-		document.getElementById('dropdown-content'+x).style.backgroundColor='#ffffff';
+		x.style.backgroundColor='#ffffff';
 	}
 }
-function changeSelected(x){
-	
+function changeSelected(){
+	x=document.innerHTML
 	console.log(x);
 	select=document.getElementById('select');
 	color=document.getElementById('maincolor')
