@@ -18,11 +18,9 @@ body{
 	border-color: #3399ff;
 	border-width: 1px;
 }
-.maindic .select option:checked{
-	background-color: #f0f0f5;
-}
 
-#color,#colormain,.dropdown-content-color{
+
+#color,#colormain,#dropdown-content-color{
 
 	height: 11px;
 	width: 11px;
@@ -34,27 +32,21 @@ body{
 	margin: 2px;
 }
 
-.dropdown span:hover {
+.dropdown div:hover {
 	background-color: #ddd;
 }
 
 .dropdown-content{
   display: none;
   position: absolute;
-  background-color: #ffffff;
-  min-width: 160px;
+  border-radius: 4px;
+  min-width: 150px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 
-.dropdown-content p {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
 .dropbtn {
   background-color: #ffffff;
@@ -73,14 +65,6 @@ body{
   display: inline-block;
 }
 
-
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
 .dropdown a:hover {background-color: #ddd;}
 .show {display: block;}

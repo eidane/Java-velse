@@ -8,7 +8,7 @@ function main(){
 
 	select = document.getElementById('select');
 	buttom = document.getElementById('selected');
-	color = document.getElementById('color');
+	color = document.getElementById('colormain');
 	buttom.innerHTML=options[0].opname;
 	color.style.backgroundColor=options[0].color;
 
@@ -35,6 +35,8 @@ function main(){
 		select.appendChild(makediv);
 		div = document.getElementById('dropdown-content'+x);
 		
+		document.getElementById('dropdown-content'+x).addEventListener("mouseover",changecolor(true,x))
+		document.getElementById('dropdown-content'+x).addEventListener("mouseout",changecolor(false,x))
 		div.appendChild(dot);
 		div.appendChild(opt);
 		
@@ -59,7 +61,17 @@ window.onclick = function(event) {
     }
   }
 }
-//#f0f0f5
+//#f0f0f5 background-color: #ddd;
+function changecolor(y,x){
+	if (y==true){
+		console.log('yes');
+		document.getElementById('dropdown-content'+x).style.backgroundColor='#ddd';
+	}
+	else{
+		console.log('no');
+		document.getElementById('dropdown-content'+x).style.backgroundColor='#ffffff';
+	}
+}
 function changeSelected(x){
 	opname=x.opname;
 	color=x.color;
