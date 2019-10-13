@@ -17,9 +17,9 @@ function main(){
 		//createElement()
 		var opt=document.createElement('span');
 		var dot=document.createElement('span');
-		var breakeit=document.createElement('p');
-		dot.id="dropdown-content"
-		dot.class="color"
+		var breakeit=document.createElement('br');
+		dot.id="dropdown-content-color"
+		
 		dot.style.backgroundColor=options[x].color;
 
 		opt.value=x
