@@ -18,13 +18,14 @@ function main(){
 		var opt=document.createElement('span');
 		var dot=document.createElement('span');
 		var makediv=document.createElement('div');
-		dot.id="dropdown-content-color"
+		dot.id="dropdown-content-color";
 		
 		dot.style.backgroundColor=options[x].color;
-		makediv.id="dropdown-content"+x
-		makediv.classname="dropdown-content"
-		opt.value=x
-		opt.id="dropdown-content"
+		makediv.id="dropdown-content"+x;
+		makediv.classname="dropdown-content";
+		opt.value=x;
+		opt.id="dropdown-content";
+		
 		console.log(opt);
 		console.log(dot);
 		opt.innerHTML = options[x].opname;
@@ -33,6 +34,7 @@ function main(){
 		//opt.onclick=function() { options[x].opname;};
 		select.appendChild(makediv);
 		div = document.getElementById('dropdown-content'+x);
+		
 		div.appendChild(dot);
 		div.appendChild(opt);
 		
@@ -58,8 +60,14 @@ window.onclick = function(event) {
   }
 }
 //#f0f0f5
-function changeSelected(x,select){
-	console.log(x)
+function changeSelected(x){
+	opname=x.opname;
+	color=x.color;
+	console.log(x);
+	select=document.getElementById('select');
+	color=document.getElementById('maincolor')
+	select.innerHTML=opname;
+	console.log('help');
 	select.innerHTML=x;
 }
 function option(opname,color){
