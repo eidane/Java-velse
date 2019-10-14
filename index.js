@@ -67,23 +67,25 @@ window.onclick = function(event) {
 //#f0f0f5 background-color: #ddd;
 function hoverover(y,x){
 	if (y==true){
-		console.log(x);
+		//console.log(x);
 		x.style.backgroundColor='#ddd';
 	}
 	else{
-		console.log(x);
+		//console.log(x);
 		x.style.backgroundColor='#ffffff';
 	}
 }
-function changeSelected(){
-	x=document.innerHTML
-	console.log(x);
-	select=document.getElementById('select');
-	color=document.getElementById('maincolor')
-	select.innerHTML=opname;
-	console.log('help');
-	select.innerHTML=x;
+function changeSelected(x){
+	
+	console.log(x.childNodes[0].style.backgroundColor);
+
+	select=document.getElementById('selected');
+	color=document.getElementById('colormain')
+	x.innerHTML;
+	select.innerHTML=x.childNodes[1].innerHTML;
+	color.style.backgroundColor=x.childNodes[0].style.backgroundColor
 }
+
 function option(opname,color){
 	this.opname=opname;
 	this.color=color;
