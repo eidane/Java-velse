@@ -3,8 +3,6 @@ function main(){
 	//imput kilde
 	options=[Option1=new option("Option 1","#99ff99"), Option2=new option("Option 2","#33adff"),Option3=new option("Option 3","#ff9933"),Option4=new option("Option 4","#ff8080")];
 	i=options.length;
-	console.log(options);
-
 	select = document.getElementById('select');
 	buttom = document.getElementById('selected');
 	color = document.getElementById('colormain');
@@ -25,11 +23,7 @@ function main(){
 		opt.value=x;
 		opt.id="dropdown-content";
 
-		console.log("number");
-		console.log(x);
 		opt.innerHTML = options[x].opname;
-		console.log(options[x].opname);
-		console.log(options[x].color);
 
 		//opt.onclick=function() { options[x].opname;};
 		select.appendChild(makediv);
@@ -38,9 +32,8 @@ function main(){
 		
 		div.appendChild(dot);
 		div.appendChild(opt);
-		console.log(div);
 		
-		//This needs to be inserted correctly then it will be in the goal.
+		
 		document.getElementById('dropdown-content'+x).addEventListener("mouseover",function() { hoverover(true,this)})
 		document.getElementById('dropdown-content'+x).addEventListener("mouseout",function() {hoverover(false,this)})
 		document.getElementById('dropdown-content'+x).addEventListener("click",function(){changeSelected(this)})
@@ -76,8 +69,6 @@ function hoverover(y,x){
 	}
 }
 function changeSelected(x){
-	
-	console.log(x.childNodes[0].style.backgroundColor);
 
 	select=document.getElementById('selected');
 	color=document.getElementById('colormain')
